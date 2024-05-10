@@ -1,47 +1,109 @@
-.body {
-    margin: 0;
-    font-family: "Work Sans", sans-serif;
-    color: white;
-    background: #202731;
+body {
+  font-family: "Work Sans", sans-serif;
+  color: aliceblue;
+  background: #202731;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 350px;
-    padding: 100px 20vw;
-}
-
-.animate {
-    animation-name: appear;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    opacity: 0;
+.logo {
+  padding-top: 30px;
+  display: block;
+  height: 80px;
+  width: 80px;
 }
 
 .bigImage {
-    width: 800px;
-    height: 350px;
-    padding: 5px;
-    min-width: none;
-    min-height: none;
-    display: flex;
-    flex-direction: row;
-    animation-name: appear;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    opacity: 0;
+  width: 800px;
+  height: auto;
+  margin-bottom: 30px;
 }
 
-@keyframes appear {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.privacy {
+  /* display: inline-block; */
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin-left: 50px;
+  padding: 10px;
+  width: 40vw;
+  height: 100vh;
+  overflow-y: scroll;
+  display: inline-block;
+}
+
+.tos {
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin-right: 50px;
+  padding: 10px;
+  width: 40vw;
+  height: 100vh;
+  overflow-y: scroll;
+  display: inline-block;
+}
+
+.serverInv {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 255, 0.5);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+  font-size: 16px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.serverInv:hover {
+  background-color: rgba(0, 0, 255, 0.7);
+}
+
+@media only screen and (max-width: 768px) {
+  .bigImage {
+    width: 90vw;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .privacy {
+    display: block;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin-left: 0px;
+    margin-top: 20px;
+    width: 90vw;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+
+  .tos {
+    display: block;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin-right: 0px;
+    width: 90vw;
+    height: 100vh;
+    overflow-y: scroll;
+  }
 }
