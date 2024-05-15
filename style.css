@@ -72,7 +72,7 @@ body {
   background-color: rgba(0, 0, 255, 0.7);
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .bigImage {
     width: 90vw;
     height: auto;
